@@ -1,1 +1,17 @@
+/*
+**
+** QWASAR.IO -- my_count_files
+**
+** @param 
+**
+** @return 
+**
+*/
 
+#pfp()
+#{
+#	printf "$(cd "$(dirname "${1}";)" && pwd -P;)/$(basename "${1}";)\n";
+#}; # KVPB's PFP
+
+#find . \( -type f -o -type d \); #-iname {,.}\*
+find .//. ! -name . -print | grep -c //;
