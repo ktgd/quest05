@@ -1,1 +1,18 @@
+/*
+**
+** QWASAR.IO -- my_clean
+**
+** @param 
+**
+** @return 
+**
+*/
 
+#lt ()
+#{
+#	printf '%s\n' {.{.?,[^.]},}*;
+#}; # KVPB's LT
+
+#touch '#' '#0' '#0#' '0#' '~' '~0' '~0~' '0~' '#~' '#~#' '~#' '~#' '~#~' '#~'; # debug code
+#printf -- ./**/{,~}*{,#}(.);
+find . ! -type d \( -iname \#\*\# -o -iname \*\~ \) -print -exec rm {} \; #find . ! -type d \( -iname \#\*\# -o -iname \*\~ \) -exec printf '%s\n' {} \; # debug code
