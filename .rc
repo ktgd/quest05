@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+unalias rc;
 unalias mf;
 unalias md;
 unalias ascii;
@@ -59,6 +60,7 @@ ascii()
 	printf '\n';
 };
 
+alias rc='source .rc &> /dev/null'; #> fd 2>&1'; # (Silence the command.) Redirect STDERR and STDOUT to /dev/null. https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 alias g='git';
 alias k='[ -e ./0 ] && rm 0; gcc -o 0 *.c && ./0; rm 0;';
 alias d='cd';
@@ -67,7 +69,7 @@ alias c="printf '\033[2J\033[3J\033[1;1H';";
 
 # Filename:		.rc
 # Title:		Karl's Runcom
-# Version:		2.10 (season-01-arc-01-mar-2021-11)
+# Version:		2.11 (season-01-arc-01-mar-2021-11)
 # Description:	A runcom for the projects of Qwasar Silicon Valley.
 #
 # Author:		Karl `kvpb`
