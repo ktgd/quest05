@@ -1,0 +1,12 @@
+/*
+**
+** QWASAR.IO -- my_find_sh
+**
+** @param 
+**
+** @return 
+**
+*/
+
+#find * -type f -iname \*.sh -exec bash -c 'printf "%s\n" ${@%.sh};' _ {} +; #-printf '%P\b\b\b\n'; #-exec basename {} .sh \;; #-exec bash -c 'printf "%s\n" ${@%.sh};' _ {} +; #find . -type f -iname \*.sh -exec bash -c 'printf "%s\n" ${@%%.sh};' _ {} + | cut -c3-;
+find . -type f -iname \*.sh -exec sh -c 'for n; do basename "${n}" .sh; done;' sh {} +; # Thank you, Abdullah Dhneem.

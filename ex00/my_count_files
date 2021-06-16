@@ -1,0 +1,11 @@
+/*
+**
+** QWASAR.IO -- my_count_files
+**
+** @param 
+**
+** @return 
+**
+*/
+
+find . \( -type f -o -type d \) | wc -l; #bash -c 'printf "%s\n" $(( $(find . \( -type f -o -type d \) | wc -l;) - 1 ));'; #find .//. ! -name . -print | grep -c //; #find . \( -type f -o -type d \); #-iname {,.}\*;
