@@ -8,10 +8,4 @@
 **
 */
 
-#pfp()
-#{
-#	printf "$(cd "$(dirname "${1}";)" && pwd -P;)/$(basename "${1}";)\n";
-#}; # KVPB's PFP
-
-#find . \( -type f -o -type d \); #-iname {,.}\*
-find .//. ! -name . -print | grep -c //;
+find . \( -type f -o -type d \) | wc -l; #bash -c 'printf "%s\n" $(( $(find . \( -type f -o -type d \) | wc -l;) - 1 ));'; #find .//. ! -name . -print | grep -c //; #find . \( -type f -o -type d \); #-iname {,.}\*;
